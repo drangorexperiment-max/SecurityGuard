@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Security Guard</string>
+    
+    <!-- Dashboard -->
+    <string name="security_score">Рейтинг безопасности</string>
+    <string name="quick_scan">Быстрое сканирование</string>
+    <string name="full_scan">Полное сканирование</string>
+    <string name="last_scan">Последнее сканирование</string>
+    <string name="never">Никогда</string>
+    <string name="scan_now">Сканировать</string>
+    
+    <!-- Categories -->
+    <string name="category_apps">Приложения</string>
+    <string name="category_processes">Процессы</string>
+    <string name="category_autostart">Автозапуск</string>
+    <string name="category_network">Сеть</string>
+    <string name="category_permissions">Разрешения</string>
+    <string name="category_privacy">Приватность</string>
+    
+    <!-- Scan -->
+    <string name="scanning">Сканирование…</string>
+    <string name="scan_complete">Сканирование завершено</string>
+    <string name="threats_found">Обнаружено угроз</string>
+    <string name="no_threats">Угроз не обнаружено</string>
+    <string name="files_scanned">Файлов проверено</string>
+    <string name="apps_scanned">Приложений проверено</string>
+    
+    <!-- Process Monitor -->
+    <string name="running_processes">Запущенные процессы</string>
+    <string name="cpu_usage">CPU</string>
+    <string name="memory_usage">Память</string>
+    <string name="threads">Потоки</string>
+    <string name="kill_process">Завершить</string>
+    
+    <!-- Network -->
+    <string name="active_connections">Активные подключения</string>
+    <string name="remote_address">Удалённый адрес</string>
+    <string name="remote_port">Порт</string>
+    <string name="protocol">Протокол</string>
+    <string name="state">Состояние</string>
+    
+    <!-- Autostart -->
+    <string name="autostart_apps">Приложения автозапуска</string>
+    <string name="boot_autostart">При загрузке</string>
+    <string name="network_autostart">При подключении к сети</string>
+    <string name="sms_autostart">При получении SMS</string>
+    
+    <!-- Permissions -->
+    <string name="dangerous_permissions">Опасные разрешения</string>
+    <string name="critical_permissions">Критические разрешения</string>
+    <string name="app_permissions">Разрешения приложения</string>
+    
+    <!-- General -->
+    <string name="settings">Настройки</string>
+    <string name="refresh">Обновить</string>
+    <string name="loading">Загрузка…</string>
+    <string name="error">Ошибка</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Отмена</string>
+    <string name="delete">Удалить</string>
+    <string name="ignore">Игнорировать</string>
+    <string name="details">Подробности</string>
+    <string name="safe">Безопасно</string>
+    <string name="low_risk">Низкий риск</string>
+    <string name="medium_risk">Средний риск</string>
+    <string name="high_risk">Высокий риск</string>
+    <string name="critical_risk">Критический риск</string>
+    
+    <!-- Score labels -->
+    <string name="excellent">Отлично</string>
+    <string name="good">Хорошо</string>
+    <string name="fair">Средне</string>
+    <string name="poor">Плохо</string>
+    <string name="dangerous">Опасно</string>
+    
+    <!-- System status -->
+    <string name="root_detected">Обнаружен Root</string>
+    <string name="adb_enabled">ADB включен</string>
+    <string name="unknown_sources">Неизвестные источники</string>
+    <string name="no_screen_lock">Нет блокировки экрана</string>
+</resources>

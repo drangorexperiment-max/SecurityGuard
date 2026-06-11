@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Проверка приватности"
+            app:navigationIcon="@android:drawable/ic_menu_revert"
+            app:titleTextColor="@color/text_primary"
+            android:background="@color/primary" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Privacy Score -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@color/surface"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvPrivacyScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="--"
+                        android:textColor="@color/accent"
+                        android:textSize="48sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvPrivacyLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Оценка приватности"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Categories -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardCamera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="@color/surface"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+
+                    <TextView android:layout_width="32dp" android:layout_height="32dp"
+                        android:text="📷" android:textSize="24sp" android:gravity="center" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:layout_marginStart="12dp"
+                        android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Доступ к камере" android:textColor="@color/text_primary" android:textSize="14sp" />
+                        <TextView android:id="@+id/tvCameraApps" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="--"
+                            android:textColor="@color/text_hint" android:textSize="12sp" />
+                    </LinearLayout>
+                    <TextView android:id="@+id/tvCameraCount" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="0"
+                        android:textColor="@color/danger" android:textSize="18sp" android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardMic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="@color/surface"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:padding="16dp" android:gravity="center_vertical">
+
+                    <TextView android:layout_width="32dp" android:layout_height="32dp"
+                        android:text="🎤" android:textSize="24sp" android:gravity="center" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:layout_marginStart="12dp"
+                        android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Доступ к микрофону" android:textColor="@color/text_primary" android:textSize="14sp" />
+                        <TextView android:id="@+id/tvMicApps" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="--"
+                            android:textColor="@color/text_hint" android:textSize="12sp" />
+                    </LinearLayout>
+                    <TextView android:id="@+id/tvMicCount" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="0"
+                        android:textColor="@color/danger" android:textSize="18sp" android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="@color/surface"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:padding="16dp" android:gravity="center_vertical">
+
+                    <TextView android:layout_width="32dp" android:layout_height="32dp"
+                        android:text="📍" android:textSize="24sp" android:gravity="center" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:layout_marginStart="12dp"
+                        android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Геолокация" android:textColor="@color/text_primary" android:textSize="14sp" />
+                        <TextView android:id="@+id/tvLocationApps" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="--"
+                            android:textColor="@color/text_hint" android:textSize="12sp" />
+                    </LinearLayout>
+                    <TextView android:id="@+id/tvLocationCount" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="0"
+                        android:textColor="@color/warning" android:textSize="18sp" android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="@color/surface"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:padding="16dp" android:gravity="center_vertical">
+
+                    <TextView android:layout_width="32dp" android:layout_height="32dp"
+                        android:text="📞" android:textSize="24sp" android:gravity="center" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:layout_marginStart="12dp"
+                        android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Звонки и контакты" android:textColor="@color/text_primary" android:textSize="14sp" />
+                        <TextView android:id="@+id/tvCallApps" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="--"
+                            android:textColor="@color/text_hint" android:textSize="12sp" />
+                    </LinearLayout>
+                    <TextView android:id="@+id/tvCallCount" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="0"
+                        android:textColor="@color/danger" android:textSize="18sp" android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="@color/surface"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:padding="16dp" android:gravity="center_vertical">
+
+                    <TextView android:layout_width="32dp" android:layout_height="32dp"
+                        android:text="📩" android:textSize="24sp" android:gravity="center" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:layout_marginStart="12dp"
+                        android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="SMS" android:textColor="@color/text_primary" android:textSize="14sp" />
+                        <TextView android:id="@+id/tvSmsApps" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="--"
+                            android:textColor="@color/text_hint" android:textSize="12sp" />
+                    </LinearLayout>
+                    <TextView android:id="@+id/tvSmsCount" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="0"
+                        android:textColor="@color/critical" android:textSize="18sp" android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="@color/surface"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:padding="16dp" android:gravity="center_vertical">
+
+                    <TextView android:layout_width="32dp" android:layout_height="32dp"
+                        android:text="📁" android:textSize="24sp" android:gravity="center" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:layout_marginStart="12dp"
+                        android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Хранилище" android:textColor="@color/text_primary" android:textSize="14sp" />
+                        <TextView android:id="@+id/tvStorageApps" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="--"
+                            android:textColor="@color/text_hint" android:textSize="12sp" />
+                    </LinearLayout>
+                    <TextView android:id="@+id/tvStorageCount" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="0"
+                        android:textColor="@color/warning" android:textSize="18sp" android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="@color/surface"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:padding="16dp" android:gravity="center_vertical">
+
+                    <TextView android:layout_width="32dp" android:layout_height="32dp"
+                        android:text="🔮" android:textSize="24sp" android:gravity="center" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:layout_marginStart="12dp"
+                        android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Трекеры" android:textColor="@color/text_primary" android:textSize="14sp" />
+                        <TextView android:id="@+id/tvTrackerApps" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="--"
+                            android:textColor="@color/text_hint" android:textSize="12sp" />
+                    </LinearLayout>
+                    <TextView android:id="@+id/tvTrackerCount" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="0"
+                        android:textColor="@color/purple_500" android:textSize="18sp" android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
